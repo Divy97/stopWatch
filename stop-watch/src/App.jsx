@@ -12,12 +12,11 @@ const App = () => {
     second: 0,
     milliSecond: 0,
   });
-
-  const [interv, setInterv] = useState();
+  const [interV, setInterV] = useState();
 
   const start = () => {
     run();
-    setInterv(setInterval(run, 10));
+    setInterV(setInterval(run, 10));
   };
 
   let updatedHour = time.hour;
@@ -52,7 +51,7 @@ const App = () => {
   };
 
   const reset = () => {
-    clearInterval(interv);
+    clearInterval(interV);
     setTime({
       hour: 0,
       minute: 0,
@@ -61,12 +60,25 @@ const App = () => {
     });
   };
 
+  const stop = () => {
+    clearInterval(interV);
+  };
+
+  const resume = () => {
+    start();
+  };
+
   return (
     <div className="main-section">
       <div className="clock-holder">
         <div className="stopwatch">
           <DisplayComponent time={time} />
-          <ButtonComponent start={start} reset={reset} />
+          <ButtonComponent
+            start={start}
+            reset={reset}
+            resume={resume}
+            stop={stop}
+          />
         </div>
       </div>
     </div>
