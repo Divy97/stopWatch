@@ -13,6 +13,7 @@ const App = () => {
     milliSecond: 0,
   });
 
+  // let status = 0;
   return (
     <div className="main-section">
       <div className="clock-holder">
