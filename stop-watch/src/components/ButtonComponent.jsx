@@ -9,11 +9,8 @@ const ButtonComponent = ({ start, reset, stop, resume }) => {
       <button className="stopwatch-btn stopwatch-btn-red" onClick={reset}>
         Reset
       </button>
-      <button className="stopwatch-btn stopwatch-btn-red" onClick={stop}>
+      <button className="stopwatch-btn stopwatch-btn-yel" onClick={stop}>
         Stop
-      </button>
-      <button className="stopwatch-btn stopwatch-btn-red" onClick={resume}>
-        Resume
       </button>
     </div>
   );

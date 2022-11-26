@@ -7,11 +7,12 @@ import "./App.css";
 
 const App = () => {
   const [time, setTime] = useState({
-    hour: 0,
+    hour: 1,
     minute: 0,
     second: 0,
     milliSecond: 0,
   });
+
   const [interV, setInterV] = useState();
 
   const start = () => {
